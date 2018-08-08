@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input {
+            transition-property: background-color;
+            transition-duration: 3s;
+        }
+    </style>
+
+
+
+</head>
+<body>
+<form>
+    <p>Name : <input id = "name" type="text" pattern="[A-Za-zА-Яа-яЁё]" required></p>
+    <p>Email : <input type="email" id="email" required></p>
+    <p>Age : <input type="text" id="age" pattern="[0-9]{0,2}" required></p>
+    <input type="submit" onclick="ClickVal();">
+
+
+</form>
+<script>
+
+</script>
+
+</body>
+<script>
+   var name = document.getElementById("name");
+   var email = document.getElementById("email");
+   var age = document.getElementById("age");
+    function Val(id){
+
+        if(!document.getElementById(id).checkValidity()){
+            document.getElementById(id).style.backgroundColor = "red";
+            //document.getElementById(id).disabled = true;
+
+//           document.getElementById(id).setAttribute("disabled", true) ;
+
+        }
+
+    }
+   function ClickVal(){
+       Val("name");
+       Val("email");
+       Val("age");
+   }
+</script>
+</html>

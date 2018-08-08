@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        button{
+            float: none;
+            width: 50px;
+            background-color: aqua;
+        }
+        @keyframes move {
+            from{
+                margin-left: -120px;
+            }
+            to{
+                margin-left: 0px;
+            }
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+
+            animation: move 3s;
+        }
+        #cent{
+            transition-property: margin-left;
+            transition-duration: 5s;
+        }
+
+    </style>
+
+</head>
+<body>
+<div id="cent">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>4</button>
+    <button>5</button>
+</div>
+</body>
+<script>
+
+    cent.onclick =function (){
+        this.style.marginLeft = "50%";
+    }
+</script>
+</html>
